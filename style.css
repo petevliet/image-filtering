@@ -142,6 +142,11 @@ article.home {
 .textures span:hover {
 	cursor: pointer;
 }
+
+#newcab {
+	height: 150px;
+	width: 150px;
+}
 span.dark {
 	background: url("img/dark_wood.png") no-repeat;
 }
