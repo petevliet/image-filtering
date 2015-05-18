@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 	$(".forest").on("click", function(){
 		$('body').css('background', 'url(img/forest.jpg)');
+		$('body').css('background-size', 'cover');
 	});
 
 });
