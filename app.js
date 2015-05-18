@@ -13,4 +13,18 @@ $(document).ready(function() {
 		$('body').css('background-size', 'cover');
 	});
 
+	$(".low").on("click", function(){
+		var houses = $(".image-container");
+		$(houses).find(".home").sort(function(a, b){
+			return $(a).data('price') - $(b).data('price');
+		}).appendTo(houses);
+	});
+
+	$(".high").on("click", function(){
+		var houses = $(".image-container");
+		$(houses).find(".home").sort(function(a, b){
+			return $(b).data('price') - $(a).data('price');
+		}).appendTo(houses);
+	});
+
 });
