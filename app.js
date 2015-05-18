@@ -8,4 +8,8 @@ $(document).ready(function() {
 		$('body').css('background', 'url(img/tileable_wood_texture.png)');
 	});
 
+	$(".forest").on("click", function(){
+		$('body').css('background', 'url(img/forest.jpg)');
+	});
+
 });
