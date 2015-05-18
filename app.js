@@ -83,6 +83,9 @@ $(document).ready(function() {
 
 	$("input").on("click", function(){
 		// $(".image-container").remove(".home");
+		if ($("input:checked").length === 0){
+			$(allHomes).show();
+		} else {
 		$(".home").hide();
 		var checkedBoxes = [];
 		$("input:checked").each(function(){
@@ -106,12 +109,13 @@ $(document).ready(function() {
 		});
 		$(allHomes).each(function(i, elem){
 			for(i = 0; i < array2.length; i++){
-				if($(elem).data('price') > array2[i][0] && $(elem).data('price') < array2[i][1]){
+				if($(elem).data('price') > array2[i][0] - 1 && $(elem).data('price') < array2[i][1] + 1){
 					$(elem).show();
 					console.log(elem);
 				}
 			}
 		});
+	}
 	});
 
 	function houseFilter(array){
